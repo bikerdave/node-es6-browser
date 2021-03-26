@@ -1,0 +1,28 @@
+{
+  "name": "node-es6-browser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "webpack": "^5.28.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --config webpack.config.js --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bikerdave/node-es6-browser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bikerdave/node-es6-browser/issues"
+  },
+  "homepage": "https://github.com/bikerdave/node-es6-browser#readme"
+}
