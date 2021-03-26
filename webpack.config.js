@@ -4,7 +4,12 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'public'),
-        filename: 'webpack-numbers.js',
-        library: "webpackNumbers",
-    },
+        filename: `[name].min.js`,
+        library: 'Tom',
+        libraryExport: 'default',
+        libraryTarget: 'umd',
+        globalObject: 'this',
+    }
 };
+
+
