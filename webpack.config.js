@@ -1,11 +1,21 @@
-const path = require('path');
-
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/numeral.js',
     output: {
-        path: path.resolve(__dirname, 'public'),
-        filename: `[name].min.js`,
-        libraryTarget: 'umd',
+        filename: 'numeral.js',
+        library: {
+            type: 'umd',
+        },
         globalObject: 'this',
-    }
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                },
+            },
+        ],
+    },
 };

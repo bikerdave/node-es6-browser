@@ -1,4 +1,4 @@
-const { Tom, Jack } = require('./main.min.js');
+import { Tom, Jack } from './dist/numeral.js';
 
 const tom = new Tom();
 const jack = new Jack();

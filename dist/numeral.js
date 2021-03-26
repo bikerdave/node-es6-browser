@@ -20,13 +20,13 @@ return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
+/***/ "./src/numeral.js":
+/*!************************!*\
+  !*** ./src/numeral.js ***!
+  \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Tom\": () => (/* binding */ Tom),\n/* harmony export */   \"Jack\": () => (/* binding */ Jack)\n/* harmony export */ });\nclass Tom {\n    sayHello() {\n        return 'Hi, I am Tom.'\n    }\n}\n\nclass Jack {\n    sayHello() {\n        return 'Hi, I am Jack.'\n    }\n}\n\n\n//# sourceURL=webpack://node-es6-browser/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Numeral\": () => (/* binding */ Numeral)\n/* harmony export */ });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\nvar Numeral = /*#__PURE__*/function () {\n  function Numeral(input) {\n    _classCallCheck(this, Numeral);\n\n    _defineProperty(this, \"ignore\", [undefined, null, true, false, Infinity]);\n\n    this.set(input);\n  }\n\n  _createClass(Numeral, [{\n    key: \"set\",\n    value: function set(input) {\n      this.valueRaw = input; // @todo remove +/- from keyword checks\n\n      if (this.ignore.includes(input)) {\n        this.valueProcessed = null;\n        return;\n      }\n\n      var converted = Number(input);\n\n      if (!isNaN(converted)) {\n        this.valueProcessed = converted;\n        return;\n      } // @todo percentages\n      // remove punctuation\n      // divide by 100\n      // @todo Handle other strings e.g. 2,500\n\n\n      this.valueProcessed = null;\n    }\n  }, {\n    key: \"raw\",\n    value: function raw() {\n      return this.valueRaw;\n    }\n  }, {\n    key: \"value\",\n    value: function value() {\n      return this.valueProcessed;\n    }\n  }, {\n    key: \"isPositive\",\n    value: function isPositive() {\n      return this.valueProcessed > 0;\n    }\n  }, {\n    key: \"isNegative\",\n    value: function isNegative() {\n      return this.valueProcessed < 0;\n    } // format(string) {\n    //     return (new Formatter()).format(this, string);\n    // }\n\n  }]);\n\n  return Numeral;\n}();\n\n//# sourceURL=webpack://node-es6-browser/./src/numeral.js?");
 
 /***/ })
 
@@ -70,7 +70,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/index.js"](0, __webpack_exports__, __webpack_require__);
+/******/ 	__webpack_modules__["./src/numeral.js"](0, __webpack_exports__, __webpack_require__);
 /******/ 	
 /******/ 	return __webpack_exports__;
 /******/ })()
